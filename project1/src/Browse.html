@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Browse</title>
+    <link href="../CSS/Browse.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript">
+        var area = [
+            ['Beijing', 'Shanghai', 'Hangzhou'],
+            ['Paris', 'Lyon','Nice'],
+            ['Tokyo', 'Osaka', 'Hokkaido'],
+            ['Seoul', 'Pusan','Jeju']
+        ];
+        function changeSelect() {
+            var slt_project = document.form1.project;
+            var slt_area = document.form1.area;
+            var project_area = area[slt_project.selectedIndex - 1];
+            slt_area.length = 1;
+            for(var i=0; i < project_area.length; i++){
+                slt_area[i+1] = new Option(project_area[i],project_area[i]);
+            }
+        }
+        function Sousuo()
+        {
+            alert("已经在搜索相关内容");
+        }
+        function Dianji()
+        {
+            alert("已查找到相应主题");
+        }
+        function filter() {
+            alert("已经在筛选项目")
+        }
+    </script>
+</head>
+<body>
+<div class="header">
+    <div class="lift">
+        <a href="Home.html" class="target" >Home</a>
+        <a href="Browse.html" class="target" style="color: yellow ">Browse</a>
+        <a href="Search.html" class="target">Search</a>
+    </div>
+
+    <div class="dropdown" style="float:right;">
+        <button class="dropbtn">My account ▼</button>
+
+        <div class="dropdown-content">
+            <a href="MyPhoto.html">My Photo</a>
+            <a href="My%20Favourite.html">My Favorite</a>
+            <a href="UpLoad.html">Upload</a>
+            <a href="../index.html">Log In</a>
+        </div>
+
+</div>
+</div>
+<div id="menu" style="background-color:white;height:1000px;width:250px;float:left;margin-top: 20px">
+    <h1 style="margin:0 0 0 20px;">Search by Title</h1><br>
+
+    <input calss="ls-text" type="text" placeholder="请输入关键词"  style="margin:0;
+    border-radius: 5px; width: 180px;height: 40px" >
+
+        <a href="#"><button class="ls-btn" onclick="Sousuo()"   style=" border-radius: 10px;background-color: lightpink;font-size:15px; width: 50px;height: 40px">搜索</button></a>
+    <table  style="margin: 40px 0 70px 5px;border-collapse: collapse;
+            border: 1px outset #000000;width:95%;">
+        <tr>
+            <th style="background-color: gainsboro;font-size: 25px" >Hot Content</th>
+
+        </tr>
+        <tr>
+            <td style="background-color:white;text-align:center;"><a onclick="Dianji()" style="font-size: 20px;color: black">Senery</a> </td>
+        </tr>
+        <tr>
+            <td style="background-color:white;text-align:center;"><a  onclick="Dianji()" style="font-size: 20px;color: black">City</a> </td>
+        </tr>
+        <tr>
+            <td style="background-color:white;text-align:center;"><a  onclick="Dianji()" style="font-size: 20px;color: black">People</a> </td>
+        </tr>
+        <tr>
+            <td style="background-color:white;text-align:center;"><a onclick="Dianji()" style="font-size: 20px;color: black">Animal</a> </td>
+        </tr>
+        <tr>
+            <td style="background-color:white;text-align:center;"><a onclick="Dianji()" style="font-size: 20px;color: black">Building</a> </td>
+        </tr>
+        <tr>
+            <td style="background-color:white;text-align:center;"><a  onclick="Dianji()" style="font-size: 20px;color: black">Wonder</a> </td>
+        </tr>
+    </table>
+
+
+    <table  style="margin: 40px 0 80px 5px;border-collapse: collapse;
+            border: 1px outset #000000;width:95%;">
+        <tr>
+            <th style="background-color: gainsboro;font-size: 25px" >Hot Country</th>
+
+        </tr>
+        <tr>
+            <td style="background-color:white;text-align:center;"><a  onclick="Dianji()" style="font-size: 20px;color: black">China</a> </td>
+        </tr>
+        <tr>
+            <td style="background-color:white;text-align:center;"><a  onclick="Dianji()" style="font-size: 20px;color: black">America</a> </td>
+        </tr>
+        <tr>
+            <td style="background-color:white;text-align:center;"><a  onclick="Dianji()" style="font-size: 20px;color: black">Italy</a> </td>
+        </tr>
+        <tr>
+            <td style="background-color:white;text-align:center;"><a  onclick="Dianji()" style="font-size: 20px;color: black">Japan</a> </td>
+        </tr>
+    </table>
+
+    <table  style="margin: 40px 0 70px 5px;border-collapse: collapse;
+            border: 1px outset #000000;width:95%;">
+        <tr>
+            <th style="background-color: gainsboro;font-size: 25px" >Hot City</th>
+
+        </tr>
+        <tr>
+            <td style="background-color:white;text-align:center;"><a  onclick="Dianji()" style="font-size: 20px;color: black">Shanghai</a> </td>
+        </tr>
+        <tr>
+            <td style="background-color:white;text-align:center;"><a  onclick="Dianji()" style="font-size: 20px;color: black">Beijing</a> </td>
+        </tr>
+        <tr>
+            <td style="background-color:white;text-align:center;"><a  onclick="Dianji()" style="font-size: 20px;color: black">Tokyo</a> </td>
+        </tr>
+        <tr>
+            <td style="background-color:white;text-align:center;"><a  onclick="Dianji()" style="font-size: 20px;color: black">Seoul</a> </td>
+        </tr>
+        <tr>
+            <td style="background-color:white;text-align:center;"><a onclick="Dianji()" style="font-size: 20px;color: black">London</a> </td>
+        </tr>
+        <tr>
+            <td style="background-color:white;text-align:center;"><a  onclick="Dianji()" style="font-size: 20px;color: black">Paris</a> </td>
+        </tr>
+    </table>
+</div>
+
+<div class="content">
+    <h1>Filter</h1>
+    <table class="filler">
+
+        <tr>
+            <td>
+            <form name="form1" method="post" action="">
+                <select id="cont"style="width:200px; margin-right:80px;height: 40px;border-radius: 8px;font-size: 15px" > <option value="0">Filter by content</option>
+                    <option value="1">Senery</option>
+                    <option value="2">City</option>
+                    <option value="3">People</option>
+                    <option value="4">Animal</option>
+                    <option value="5">Building</option>
+                    <option value="6">Wonder</option>
+                </select>
+
+
+                <select id="project" onchange="changeSelect()" style="width:200px;margin-right:80px;height: 40px;border-radius: 8px;font-size: 15px">
+                    <option value="0">Filter by country</option>
+                    <option value="1">China</option>
+                    <option value="2">France</option>
+                    <option value="2">Japan</option>
+                    <option value="2">Korea</option>
+                </select>
+
+                <select id="area" style="width:200px; margin-right:80px;height: 40px;border-radius: 8px;font-size: 15px">
+                    <option value="">Filter by city</option>
+                </select>
+                <button class="btn" onclick="filter()">Filter</button>
+            </form>
+            </td>
+        </tr>
+    </table>
+    <div>
+        <table id="image">
+            <tr>
+                <td>
+                    <a href="details.html"><img src="../img/fav3.jpg" class="pic"></a>
+                </td>
+                <td>
+                    <a href="details.html"><img src="../img/home1.jpg" class="pic"></a>
+                </td>
+                <td>
+                    <a href="details.html"><img src="../img/home5.jpg" class="pic"></a>
+                </td>
+                <td>
+                    <a href="details.html"><img src="../img/home2.jpg" class="pic"></a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="details.html"><img src="../img/home3.jpg" class="pic"></a>
+                </td>
+                <td>
+                    <a href="details.html"><img src="../img/home4.jpg" class="pic"></a>
+                </td>
+                <td>
+                    <a href="details.html"><img src="../img/home6.jpg" class="pic"></a>
+                </td>
+                <td>
+                    <a href="details.html"><img src="../img/fav2.jpg" class="pic"></a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="details.html"><img src="../img/fav1.jpg" class="pic"></a>
+                </td>
+                <td>
+                    <a href="details.html"><img src="../img/bro1.jpg" class="pic"></a>
+                </td>
+                <td>
+                    <a href="details.html"><img src="../img/bro2.jpg" class="pic"></a>
+                </td>
+                <td>
+                    <a href="details.html"><img src="../img/bro3.jpg" class="pic"></a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="details.html"><img src="../img/bro4.jpg" class="pic"></a>
+                </td>
+                <td>
+                    <a href="details.html"><img src="../img/detail).jpg" class="pic"></a>
+                </td>
+                <td>
+                    <a href="details.html"><img src="../img/bro5.jpg" class="pic"></a>
+                </td>
+                <td>
+                    <a href="details.html"><img src="../img/bro6.jpg" class="pic"></a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="pages" style="text-align: center;font-size: 20px;">
+                        <<span style="color: dodgerblue;font-size: 30px">1</span> 2 3 4 5 6 ... 9 >
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+<div id="footer" style="background-color:white;clear:both;text-align:left;">
+    Copyright@ 2019-2021 ############################  备案号：19302010054</div>
+
+
+
+
+</body>
+</html>
